@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Lora:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+:root {
+  /* Colors - Design System Dump.do / Plantão 360 */
+  --background: #0a0a0a;
+  --foreground: #f2f2f2;
+  --card: #0f0f0f;
+  --card-foreground: #f2f2f2;
+  --secondary: #1f1f1f;
+  --secondary-foreground: #f2f2f2;
+  --muted: #262626;
+  --muted-foreground: #8c8c8c;
+  --border: #2e2e2e;
+  --input: #2e2e2e;
+  --ring: #666666;
+  --destructive: #ce3939;
+  --destructive-foreground: #f2f2f2;
+  --success: #38a169;
+  --warning: #d69e2e;
+  --info: #3182ce;
+
+  /* Typography */
+  --font-ui: "Space Grotesk", sans-serif;
+  --font-serif: "Lora", serif;
+
+  /* Spacing */
+  --radius: 0.5rem;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 0.75rem;
+  --spacing-base: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+
+  /* Transitions */
+  --transition-fast: 150ms;
+  --transition-normal: 200ms;
+  --transition-slow: 300ms;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Design system utility classes */
+.ds-font-ui {
+  font-family: var(--font-ui);
+}
+.ds-font-serif {
+  font-family: var(--font-serif);
+}
+.ds-h1 {
+  font-family: var(--font-ui);
+  font-size: 1.875rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+}
+.ds-h2 {
+  font-family: var(--font-ui);
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+.ds-label {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--muted-foreground);
+}
+.ds-btn-primary {
+  height: 3.5rem;
+  padding: 0 3rem;
+  background: var(--foreground);
+  color: var(--background);
+  border: none;
+  border-radius: var(--radius);
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: opacity var(--transition-normal) ease;
+}
+.ds-btn-primary:hover:not(:disabled) {
+  opacity: 0.9;
+}
+.ds-btn-primary:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.ds-btn-secondary {
+  height: 3rem;
+  padding: 0 2rem;
+  background: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  cursor: pointer;
+  transition: background var(--transition-normal) ease;
+}
+.ds-btn-secondary:hover:not(:disabled) {
+  background: var(--secondary);
+}
+.ds-btn-text {
+  background: none;
+  border: none;
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: color var(--transition-normal) ease;
+}
+.ds-btn-text:hover {
+  color: var(--foreground);
+}
+.ds-input {
+  width: 100%;
+  height: 3.5rem;
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem 1.5rem;
+  color: var(--foreground);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: var(--font-serif);
+  transition: box-shadow var(--transition-fast) ease;
+}
+.ds-input::placeholder {
+  color: var(--muted-foreground);
+}
+.ds-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px var(--ring);
+}
+.ds-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes pulse-text {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+.animate-fade-in {
+  animation: fade-in 200ms ease-out;
+}
+.animate-pulse-text {
+  animation: pulse-text 2s ease-in-out infinite;
+}
+
+@media (max-width: 767px) {
+  .ds-h1 {
+    font-size: 1.5rem;
+  }
+  .ds-btn-primary {
+    height: 3rem;
+    padding: 0 2rem;
+  }
+}

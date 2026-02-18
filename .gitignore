@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+dist-ssr/
+
+# Environment (nunca commitar chaves)
+.env
+.env.local
+.env.*.local
+
+# Logs e cache
+*.log
+.cache/
+
+# Temp / archives
+_tmp_*
+*.zip
+
+# IDE / OS
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Supabase local
+dump_do_backend/supabase/.branches
+dump_do_backend/supabase/.temp
