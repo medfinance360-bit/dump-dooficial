@@ -10,15 +10,15 @@ const ONBOARDING_DONE_KEY = 'dumpdo_onboarding_done'
 const SLIDES = [
   {
     title: 'Espaço pra despejar',
-    body: 'Tire da cabeça o que está pesando. Sem precisar explicar tudo.',
+    body: 'Tire da cabeça o que está pesando. Sem precisar explicar tudo. Pra quem trabalha sob pressão.',
   },
   {
-    title: 'Sem julgamento',
-    body: 'Ninguém vai te dar conselho não pedido. Só escuta e uma pergunta na hora certa.',
+    title: 'Sem conselho, sem sermão',
+    body: 'Você fala. A gente escuta e faz uma pergunta — se fizer sentido.',
   },
   {
-    title: 'Quando fizer sentido',
-    body: 'Às vezes uma microação. Às vezes só organizar o que você já disse.',
+    title: 'Clareza sem esforço',
+    body: 'No final, você sai sabendo o que tá pesando. Sem precisar resolver agora.',
   },
 ]
 
@@ -115,7 +115,7 @@ export function OnboardingPage() {
         <button
           type="button"
           onClick={handleSkip}
-          className="ds-btn-text ds-font-ui text-xs uppercase tracking-widest"
+          className="ds-font-ui text-[10px] uppercase tracking-widest opacity-40 hover:opacity-60 focus:outline-none"
           style={{ color: 'var(--muted-foreground)' }}
         >
           Pular

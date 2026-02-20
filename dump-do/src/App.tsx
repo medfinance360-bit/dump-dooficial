@@ -39,6 +39,7 @@ function App() {
   if (path === '/app') return <ProtectedApp />
   if (path === '/login') return <LoginPage />
   if (path === '/signup') return <SignupPage />
+  if (path === '/onboarding') return <OnboardingPage />
 
   if (path === '/' && !hasOnboardingBeenSeen()) return <OnboardingPage />
   return <LoginPage />

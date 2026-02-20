@@ -59,7 +59,7 @@ export function LoginPage() {
     >
       <div className="w-full max-w-[28rem]" style={{ maxWidth: '448px' }}>
         <a
-          href="/"
+          href="/onboarding"
           className="ds-btn-text inline-flex items-center gap-2 mb-8 ds-font-ui"
           style={{ color: 'var(--muted-foreground)' }}
         >
